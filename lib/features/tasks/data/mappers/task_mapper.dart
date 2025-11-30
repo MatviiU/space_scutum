@@ -12,6 +12,8 @@ extension TaskToEntity on Task {
 }
 
 extension TaskEntityToCompanion on TaskEntity {
+  /// Creates a Companion for INSERT operations.
+  /// Auto-increment the primary key.
   TasksCompanion toInsertCompanion() {
     return TasksCompanion.insert(
       title: title,

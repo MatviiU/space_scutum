@@ -158,7 +158,7 @@ class _TaskFormPageState extends State<TaskFormPage> {
   void _onSave() {
     if (_formKey.currentState?.validate() ?? false) {
       final newTask = TaskEntity(
-        taskId: 0,
+        taskId: 0, // Placeholder: The DB generates the actual ID (AutoIncrement)
         title: _titleController.text.trim(),
         description: _descriptionController.text.trim(),
         category: _categoryController.text.trim(),

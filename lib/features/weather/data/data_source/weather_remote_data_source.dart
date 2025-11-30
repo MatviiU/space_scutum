@@ -21,11 +21,13 @@ class WeatherRemoteDataSourceImpl implements WeatherRemoteDataSource {
     required double lat,
     required double lon,
   }) async {
-    final weatherApiKey = dotenv.env['WEATHER_API_KEY'];
+    // We retrieve the API Key securely from environment variables.
+    // This prevents exposing sensitive keys in the source code.
+    final weatherApiKey = dotenv.env['WEATHER_API_KEY'] ?? '';
     return _weatherApi.getCurrentWeather(
       lat: lat,
       lon: lon,
-      apiKey: weatherApiKey!,
+      apiKey: weatherApiKey,
     );
   }
 }
