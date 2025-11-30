@@ -6,6 +6,7 @@ import 'package:space_scutum/features/tasks/presentation/bloc/tasks_state.dart';
 import 'package:space_scutum/features/tasks/presentation/widgets/empty_tasks_widget.dart';
 import 'package:space_scutum/features/tasks/presentation/widgets/task_list.dart';
 import 'package:space_scutum/features/tasks/presentation/widgets/tasks_filter_bar.dart';
+import 'package:space_scutum/features/weather/presentation/widgets/current_weather_widget.dart';
 import 'package:space_scutum/router/app_routes_names.dart';
 
 class TasksPage extends StatelessWidget {
@@ -46,6 +47,8 @@ class TasksPage extends StatelessWidget {
           ),
           body: Column(
             children: [
+              const SizedBox(height: 8),
+              const CurrentWeatherWidget(),
               const SizedBox(height: 16),
               const TasksFilterBar(),
               const SizedBox(height: 16),
