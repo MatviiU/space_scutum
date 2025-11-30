@@ -21,6 +21,10 @@ dependencies:
   path_provider: ^2.1.5
   injectable: ^2.7.0
   flutter_svg: ^2.2.3
+  flutter_dotenv: ^6.0.0
+  retrofit: ^4.9.0
+  logger: ^2.6.0
+  dio: ^5.9.0
 
 dev_dependencies:
   flutter_test:
@@ -30,6 +34,8 @@ dev_dependencies:
   drift_dev: ^2.29.0
   injectable_generator: ^2.9.1
   flutter_lints: ^6.0.0
+  retrofit_generator: ^10.0.1
+  sqlite3_flutter_libs: ^0.5.41
 
 flutter:
 
@@ -37,4 +43,5 @@ flutter:
 
   assets:
     - assets/no_data.svg
+    - .env
   #   - images/a_dot_ham.jpeg
